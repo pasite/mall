@@ -8,11 +8,40 @@
     <name>mall</name>
     <description>聚合服务</description>
     <packaging>pom</packaging>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <modules>
+        <!--优惠券服务-->
         <module>mall-coupon</module>
+        <!--会员服务-->
         <module>mall-member</module>
+        <!--订单服务-->
         <module>mall-order</module>
+        <!--产品服务-->
         <module>mall-product</module>
+        <!--仓储服务-->
         <module>mall-ware</module>
+        <!--公共bean，依赖-->
+        <module>mall-common</module>
+        <!--人人后台-->
+        <module>renren-fast</module>
+        <!--代码生成器-->
+        <module>renren-generator</module>
     </modules>
 </project>
